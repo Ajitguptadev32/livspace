@@ -1,11 +1,11 @@
 import Image from "next/image";
+import Herosection from "./components/Herosection";
 
 export default function Home() {
    return (
-      <main>
-         <h1>Ajit</h1>
-         <h2>Ajit</h2>
-         <p>Ajit</p>
-      </main>
+      <Herosection
+         title={"LET'S WATCH MOVIE TOGETHER"}
+         imageUrl={"/home.svg"}
+      />
    );
 }
