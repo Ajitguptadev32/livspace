@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/app/styles/common.module.css";
 import Link from "next/link";
 import Image from "next/image";
+
 const MovieCard = (currElem) => {
    const { id, type, title, synopsis } = currElem.jawSummary;
    return (
@@ -15,8 +16,8 @@ const MovieCard = (currElem) => {
             />
          </duv>
          <div className={styles.card_data}>
-            <h2>{title}</h2>
-            <p>{synopsis}</p>
+            <h2>{title.substring(0, 18)}</h2>
+            <p>{synopsis.substring(0, 66)}</p>
             <Link href={`/gallery/${id}`}>
                {" "}
                <button>Read More</button>

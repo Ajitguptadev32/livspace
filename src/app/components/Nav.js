@@ -1,5 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import Fade from "@mui/material/Fade";
+import Zoom from "@mui/material/Zoom";
 
 import styles from "@/app/styles/navbar.module.css";
 const Nav = () => {
@@ -15,7 +19,7 @@ const Nav = () => {
                <li className={styles.navbarItem}>
                   <Link className={styles.navbarLink} href="/about">
                      About
-                  </Link>
+                  </Link>{" "}
                </li>{" "}
                <li className={styles.navbarItem}>
                   <Link className={styles.navbarLink} href="/contact">

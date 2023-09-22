@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import MovieCard from "../components/MovieCard";
 import styles from "@/app/styles/common.module.css";
-import heroStyles from "@/app/styles/herosection.module.css";
-import Image from "next/image";
 const page = async () => {
+   await new Promise((resolve) => setTimeout(resolve, 2000));
+
    const url = process.env.RAPID_KEY;
 
    const options = {
@@ -24,9 +24,11 @@ const page = async () => {
       <section className={styles.movieSection}>
          <div className={styles.container}>
             <h1>Movie Page</h1>
-            {main_data.map((currElem) => {
-               return <MovieCard key={currElem.id} {...currElem} />;
-            })}
+            <div className={styles.card_section}>
+               {main_data.map((currElem) => {
+                  return <MovieCard key={currElem.id} {...currElem} />;
+               })}
+            </div>
          </div>
       </section>
    );
